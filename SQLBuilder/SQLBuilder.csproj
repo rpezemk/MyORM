@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Chains\**" />
+    <Compile Remove="StringProviders\CaseStringProvider\**" />
+    <Compile Remove="StringProviders\QueryStringProviders\**" />
+    <EmbeddedResource Remove="Chains\**" />
+    <EmbeddedResource Remove="StringProviders\CaseStringProvider\**" />
+    <EmbeddedResource Remove="StringProviders\QueryStringProviders\**" />
+    <None Remove="Chains\**" />
+    <None Remove="StringProviders\CaseStringProvider\**" />
+    <None Remove="StringProviders\QueryStringProviders\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Schemas\ALL_CDN.cs" />
+  </ItemGroup>
+
+</Project>
